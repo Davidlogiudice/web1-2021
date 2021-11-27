@@ -85,12 +85,17 @@
 
 
 footer{
-  background-color: #d8d8d8;
-  justify-content: center;
-  display: flex;
+
+  list-style-type: none;
+ 
+
+  margin-top: 3%;
+  background-color: #1e9ce6;
   position: relative;
-  flex-wrap: nowrap;
-margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
 }
 footer > p {
   display: flex;
@@ -483,6 +488,67 @@ input {
 
 }
 
+.UL2{
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+}
+
+
+
+.UL2 a {
+  display: flex;
+  width: 3em;
+  height: 3em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+ 
+  text-indent: -9999px;
+
+  background-image: url(Images/social_sprite.png);
+  
+}
+  
+
+.UL2 a[href*="facebook"] {
+  background-position: -48px top;
+      
+}
+.UL2 a[href*="facebook"]:hover {
+  background-position: -48px bottom;
+      
+}
+.UL2 a[href*="discord"] {
+  background-position: -96px top;
+}
+.UL2 a[href*="discord"]:hover {
+  background-position: -96px bottom;
+}
+.UL2 a[href*="reddit"] {
+  background-position: -144px top;
+}
+.UL2 a[href*="reddit"]:hover{
+  background-position: -144px bottom;
+}
+.UL2 a[href*="twitter"]:hover {
+  background-position: 0px bottom;
+}
+.UL2 a[href*="youtube"] {
+  background-position: -192px top;
+  
+}
+.UL2 a[href*="youtube"]:hover {
+  background-position: -192px  bottom;
+}
+.UL2{
+  position: relative;
+}
+.LI2{
+  position: relative;
+  display: inline-flex;
+  margin:auto;
+}
 
 
 @media screen and (max-width:450px) {
