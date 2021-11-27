@@ -1,0 +1,466 @@
+/********************
+*       FONT       *
+*********************/
+@font-face {
+  font-family: "san_francisco";
+  src: url("fonts/SFUIDisplay-Thin.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "san_francisco";
+  src: url("fonts/SFUIDisplay-Ultralight.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "san_francisco";
+  src: url("fonts/SFUIDisplay-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "san_francisco";
+  src: url("fonts/SFUIDisplay-Medium.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "san_francisco";
+  src: url("fonts/SFUIDisplay-Semibold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "san_francisco";
+  src: url("fonts/SFUIDisplay-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "san_francisco";
+  src: url("fonts/SFUIDisplay-Black.otf");
+  font-weight: 900;
+}
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?gstpca');
+  src:  url('fonts/icomoon.eot?gstpca#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?gstpca') format('truetype'),
+    url('fonts/icomoon.woff?gstpca') format('woff'),
+    url('fonts/icomoon.svg?gstpca#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart{
+  color: black;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.icon-cart::after{
+  color: white;
+  font-family: 'san_francisco', sans-serif;
+  content: "3";
+
+
+}
+.icon-cart:before {
+  content: "\e93a    ";
+}
+
+
+footer{
+  background-color: #d8d8d8;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+margin-top: 10%;
+}
+footer > p {
+  display: flex;
+  position: relative;
+
+}
+
+/*ANIMATIONS*/
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+
+main {
+  display: flex;
+justify-content: center;
+margin-top: 2%;
+}
+
+
+
+/********************
+*    Generic css    *
+*********************/
+:root{
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    font-family: 'san_francisco', sans-serif;
+    font-weight: normal;
+       margin: 0;
+}
+body{
+    margin: 0
+    
+}
+
+.logo {
+    float: left;
+    font-size: 2.5rem;
+    font-weight: bolder ;
+
+   
+}
+.logo::after{
+    content: " Mania";
+    color: yellow;
+    font-family: 'san_francisco', sans-serif;
+    font-weight: bold;
+}
+
+
+ .logo::before{
+     content: "Pop-it";
+     color: white;
+     font-family: 'san_francisco', sans-serif;
+     font-weight: bold;
+ }
+
+.home_above{
+  background-image: url(./Images/main.jpg);
+
+background-color: rgba(255, 255, 255, 0.6);
+  background-repeat: no-repeat, repeat;
+  object-fit: cover;
+  
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 10%;
+
+  width: 100%;
+
+  align-content: flex-end;
+  align-items: center;
+}
+.home_above > img{
+  box-shadow: 1px -1px 55px -12px rgb(0 0 0 / 75%);
+  animation: fadeIn 5s;
+  transition: none;
+
+width: 80%;
+}
+
+.home_above figcaption > p::after {
+  color: red;
+  content: " -30%";
+}
+.home_above > :last-child {
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  box-shadow: 1px -1px 55px -12px rgb(0 0 0 / 90%);
+  color: white;
+  
+}
+
+
+
+
+.center{
+
+  justify-content: center;
+  text-align: center;
+}
+  
+ 
+.menu {
+    font-size: 1.1em;
+    text-transform: capitalize;
+    
+}
+header ul {
+ margin: 1% 0;
+ border-bottom: 4px dotted white;
+
+}
+
+
+ header nav li a {
+color: white;
+margin-bottom: 7%;
+     text-decoration: none;
+     
+ }
+ header nav li a:hover {
+    color: black;
+
+     }
+header nav ul li{
+    display: inline-flex;
+    position: relative;
+    margin-left: 8%;
+    text-decoration: none;
+    
+}
+
+
+
+#button:hover{
+    color: black;
+background-color: #FFF3DF;
+opacity: 1;
+animation-name: fadeInOpacity;
+animation-iteration-count: 1;
+animation-timing-function: ease-in;
+animation-duration: 0.1s;
+box-shadow: 0px 10px 13px -7px #000000, -2px 12px 50px 26px rgba(255,172,23,0.59);
+cursor:pointer;
+}
+
+
+.separation_flex{
+  margin: 3%;
+  display: flex;
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+}
+.separation_flex > img {
+  max-width: 50%;
+  margin: auto;
+  justify-content: center;
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+}
+#button {
+    background-color: #DB6300; /* Green */
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: capitalize;
+    border-radius: 5%;
+    margin-top: 7%;
+  }
+
+  @keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .icon-calendar:before {
+    content: "\e953";
+  }
+  form{
+      margin-left: 25%;
+      position: absolute;
+  }
+
+/********************
+*       Header      *
+*********************/
+
+/*****/
+
+
+
+.register {
+
+  margin: 0 auto;
+  padding: 2.5%;
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  background:rgba(255, 255, 255, 0.6);;
+  box-shadow: 1px -1px 55px -12px rgba(0,0,0,0.75);
+}
+
+.register > h1,p{
+  text-align: center;
+}
+
+
+
+.shop_section{
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-content: center;
+
+
+
+}
+
+
+.shop_block {
+    margin: 1%;
+  background:rgba(255, 255, 255, 0.6);;
+  box-shadow: 1px -1px 55px -12px rgba(0,0,0,0.75);
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+
+}
+
+.shop_block h1{
+  text-align: center;
+
+}
+#price{
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: 'san_francisco', sans-serif;
+  
+}
+
+
+.shop_block > button{
+  background-color: #DB6300; /* Green */
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  text-align: center;
+   font-size: 0.9rem;
+  text-transform: capitalize;
+  border-radius: 3%;
+  width: 100%;
+  cursor: pointer;
+height: 10%;
+
+}
+
+.shop_block > img{
+  padding: 5%;
+  max-width: 75%;
+  margin: auto;
+    object-fit: scale-down;
+    display: flex;
+    position: relative;
+}
+
+
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.register-input {
+  display: flex;
+  width: 100%;
+  height: 38px;
+  margin: 2%;
+  justify-content: center;
+
+  margin-top: 2px;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.register-input:focus {
+  border-color: #1e9ce6;
+  outline: 0;
+}
+
+
+
+
+
+/********************
+*       Home      *
+*********************/
+.title1{
+   font-weight: bolder; 
+   font-size: 2rem;
+
+   font-family: 'Heebo', sans-serif;
+}
+.title2{
+    font-weight: bolder; 
+    font-size: 2rem;
+ text-align: center;
+    font-family: 'Heebo', sans-serif;
+ }
+.title1::after {
+    color: #DB6300;
+    content: "Traveling ";
+  }
+
+.half{
+ display: inline-flex;
+ position: relative;
+ width: 50%;
+}
+
+/********************
+*      Gallery     *
+*********************/
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  
+
+/********************
+*       About       *
+*********************/
+
+}
