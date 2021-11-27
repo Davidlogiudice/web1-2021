@@ -123,10 +123,12 @@ margin-top: 2%;
     font-family: 'san_francisco', sans-serif;
     font-weight: normal;
        margin: 0;
+             
 }
 body{
-    margin: 0
-    
+    margin: 0;
+ 
+
 }
 
 .logo {
@@ -162,7 +164,7 @@ background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
   display: flex;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 
   width: 100%;
 
@@ -331,30 +333,41 @@ cursor:pointer;
 
     align-content: center;
 
-
+    transition: transform .2s; /* Animation */
 
 }
 
 
 .shop_block {
+  display: list-item;
+list-style-type: none;
+
     margin: 1%;
   background:rgba(255, 255, 255, 0.6);;
   box-shadow: 1px -1px 55px -12px rgba(0,0,0,0.75);
-  -webkit-order: 0;
-  -ms-flex-order: 0;
+
   order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
 
 }
 
+
+
+.shop_block:hover {
+filter: saturate(3);
+cursor: pointer;
+transform: scale(1.4); 
+}
+
+
 .shop_block h1{
   text-align: center;
+text-transform: uppercase;
+white-space: pre-line;
+}
 
+.shop_block img{
+  width: 250px;
+  height: 250px;
 }
 #price{
   font-size: 1rem;
@@ -383,12 +396,17 @@ height: 10%;
   padding: 5%;
   max-width: 75%;
   margin: auto;
-    object-fit: scale-down;
+    object-fit: cover;
     display: flex;
     position: relative;
 }
 
 
+
+
+.filter option{
+  background-color: #d8d8d8;
+}
 
 input {
   font-family: inherit;
@@ -464,3 +482,29 @@ input {
 *********************/
 
 }
+
+
+
+@media screen and (max-width:450px) {
+    
+
+header  {
+    display: block;
+width: 100%;
+    justify-content: center;
+    
+} 
+    .logo{
+    
+    font-size: 1.1rem;
+   
+    }
+    nav li ul {
+      font-size: 1.1rem;
+    }
+    .icon-cart{
+      font-size: 100%;
+    }
+
+}
+
